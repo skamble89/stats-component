@@ -1,0 +1,57 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+
+<!--
+`stats-component`
+Component to display stats
+
+@demo demo/index.html
+-->
+
+<dom-module id="stats-component">
+  <template>
+    <style>
+       :host {
+        float: left;
+        font-family: 'Roboto', 'Noto', sans-serif;
+      }
+      
+      section {
+        border: 1px solid #e1e6ed;
+        padding: 10px;
+        height:135px;
+        text-align: center;        
+      }
+      
+      .stat-value {
+        font-size: 2em;
+      }
+      
+      .stat-description {
+        font-size: 1.3em;
+        font-weight: 100;
+      }
+    </style>
+    <section class="stat">
+      <span class="stat-value">[[statValue]]</span>
+      <p class="stat-description">[[statDescription]]</p>
+    </section>
+  </template>
+
+  <script>
+    class StatsElement extends Polymer.Element {
+      static get is() { return 'stats-component'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'stats-component'
+          },
+          statValue: String,
+          statDescription: String
+        };
+      }
+    }
+
+    window.customElements.define(StatsElement.is, StatsElement);
+  </script>
+</dom-module>

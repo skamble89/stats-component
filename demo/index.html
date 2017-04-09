@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>stats-component demo</title>
+
+    <script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="/bower_components/iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="/bower_components/iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../stats-component.html">
+
+    <style is="custom-style" include="demo-pages-shared-styles">
+    </style>
+  </head>
+  <body>
+    <div class="vertical-section-container centered">
+      <h3>Basic stats-component demo</h3>      
+      <stats-component stat-value="0.2%" stat-description="Coverage across 1 application"></stats-component>
+      <stats-component stat-value="279 days" stat-description="ETA based on yesterday"></stats-component>
+      <stats-component stat-value="25" stat-description="Concepts significantly impacted"></stats-component>
+    </div>
+  </body>
+</html>
