@@ -10,16 +10,17 @@
 
     <link rel="import" href="../bower_components/iron-demo-helpers/demo-pages-shared-styles.html">
     <link rel="import" href="../bower_components/iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../stats-container-component.html">
     <link rel="import" href="../stats-component.html">
 
     <style is="custom-style" include="demo-pages-shared-styles">
     </style>
   </head>
   <body>
-    <div class="vertical-section-container centered">            
+    <stats-container-component>
       <stats-component stat-value="0.2%" stat-description="Coverage across 1 application"></stats-component>
       <stats-component stat-value="279 days" stat-description="ETA based on yesterday"></stats-component>
       <stats-component stat-value="25" stat-description="Concepts significantly impacted"></stats-component>
-    </div>
+    </stats-container-component>
   </body>
 </html>

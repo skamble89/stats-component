@@ -11,15 +11,18 @@ Component to display stats
   <template>
     <style>
        :host {
-        float: left;
         font-family: 'Roboto', 'Noto', sans-serif;
+        flex: 1;
+        flex-basis: 0.000000001px;        
+        border: 1px solid #e1e6ed;
+        border-right: 0;
+        height: 135px;
       }
       
-      section {
-        border: 1px solid #e1e6ed;
+      section {        
         padding: 10px;
-        height:135px;
-        text-align: center;        
+        text-align: center;
+        cursor: pointer;
       }
       
       .stat-value {
@@ -29,6 +32,7 @@ Component to display stats
       .stat-description {
         font-size: 1.3em;
         font-weight: 100;
+        margin: 0;
       }
     </style>
     <section class="stat">

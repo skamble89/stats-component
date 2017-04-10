@@ -1,0 +1,42 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+
+<!--
+`stats-container-component`
+Component to display stats
+
+@demo demo/index.html
+-->
+
+<dom-module id="stats-container-component">
+    <template>
+        <style>
+             :host {
+                -webkit-display: flex;
+                display: flex;                
+                line-height: 1.5;
+                min-height: 100vh;
+            }
+            
+             ::slotted(stats-component:last-of-type) {
+                border-right: 1px solid #e1e6ed;
+            }
+        </style>
+        <slot></slot>
+    </template>
+
+    <script>
+        class StatsContainerElement extends Polymer.Element {
+            static get is() { return 'stats-container-component'; }
+            static get properties() {
+                return {
+                    prop1: {
+                        type: String,
+                        value: 'stats-container-component'
+                    }
+                };
+            }
+        }
+
+        window.customElements.define(StatsContainerElement.is, StatsContainerElement);
+    </script>
+</dom-module>
